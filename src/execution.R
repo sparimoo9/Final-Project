@@ -11,6 +11,8 @@ data <- read.csv("C:/Users/Shaun Parimoo/Desktop/BioStatistics/FinalProj/data/Da
 #Optional Make sure the data is viewable
 # View(data)
 
-
-
-
+data$logMarketCap <- log(data$Market.Cap) # to make the relationship linear insted of curved
+plot(Total.Return.Y.2 ~ logMarketCap, data = data)
+reg1 <- lm(Total.Return.Y.2 ~ logMarketCap, data = data)
+summary(reg1)
+abline(reg1)
