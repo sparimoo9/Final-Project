@@ -5,3 +5,12 @@
 # 5. Push the button and run it all
 
 
+setwd("C:/Users/Shaun Parimoo/Desktop/BioStatistics/FinalProj/") # Set this to be your own WD
+data <- read.csv("C:/Users/Shaun Parimoo/Desktop/BioStatistics/FinalProj/data/Data1.csv") # I used full path here to set the var data
+
+#Optional Make sure the data is viewable
+# View(data)
+
+
+
+
