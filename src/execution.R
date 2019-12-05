@@ -16,3 +16,9 @@ plot(Total.Return.Y.2 ~ logMarketCap, data = data)
 reg1 <- lm(Total.Return.Y.2 ~ logMarketCap, data = data)
 summary(reg1)
 abline(reg1)
+
+
+# interpretation every 1 % inc in log Market Cap reduces total return by 5 units (%)
+# y= A+BX
+# Total Return = 58.482 - 5.079 ( log Market Cap)
+# 
