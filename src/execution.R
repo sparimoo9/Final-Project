@@ -12,10 +12,20 @@ data <- read.csv("C:/Users/Shaun Parimoo/Desktop/BioStatistics/FinalProj/data/Da
 # View(data)
 
 data$logMarketCap <- log(data$Market.Cap) # to make the relationship linear insted of curved
-plot(Total.Return.Y.2 ~ logMarketCap, data = data)
+
 reg1 <- lm(Total.Return.Y.2 ~ logMarketCap, data = data)
 summary(reg1)
+
+
+pdf("C:/Users/Shaun\ Parimoo/Desktop/BioStatistics/FinalProj/results/regression.pdf") # rename the acct
+plot(Total.Return.Y.2 ~ logMarketCap, data = data)
 abline(reg1)
+dev.off()
+
+sink("C:/Users/Shaun\ Parimoo/Desktop/BioStatistics/FinalProj/results/lm.txt") # output of the test with pval and test stat
+print(summary(reg1))
+sink()
+
 
 
 # interpretation every 1 % inc in log Market Cap reduces total return by 5 units (%)
