@@ -1,0 +1,20 @@
+
+Call:
+lm(formula = Total.Return.Y.2 ~ logMarketCap, data = data)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-107.51  -53.55  -28.18   23.07  553.35 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)    58.482     20.677   2.828  0.00483 ** 
+logMarketCap   -5.079      1.196  -4.246 2.51e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 85.32 on 618 degrees of freedom
+  (2 observations deleted due to missingness)
+Multiple R-squared:  0.02834,	Adjusted R-squared:  0.02677 
+F-statistic: 18.03 on 1 and 618 DF,  p-value: 2.515e-05
+
